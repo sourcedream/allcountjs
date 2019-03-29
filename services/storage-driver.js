@@ -68,7 +68,8 @@ module.exports = function (dbUrl, injection, appUtil) {
 
     service.findRange = function (table, filteringAndSorting, start, count) {
         return ensureIndexes(table, filteringAndSorting).then(function () {
-            return Q(modelFor(table).find(queryFor(table, filteringAndSorting)).sort(sortingFor(filteringAndSorting, table.fields)).limit(count).skip(start).exec())
+            // TODO: Better validation agains NaN
+            return Q(modelFor(table).find(queryFor(table, filteringAndSorting)).sort(sortingFor(filteringAndSorting, table.fields)).limit(parseInt(count)).skip(parseInt(start)).exec())
                 .then(function (result) { return result.map(fromBson(table)) });
         });
     };
