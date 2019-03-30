@@ -44,6 +44,7 @@ module.exports = function (dbUrl, injection, dbClient) {
 
     service.findCount = function (table, filteringAndSorting) {
         var where = queryFor(table, filteringAndSorting);
+        // FIXME: count deprecated
         return Q(where(knex(table.tableName)).count('id as count')).then(function (result) {
             return result[0].count;
         });

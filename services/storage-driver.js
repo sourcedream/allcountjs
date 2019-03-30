@@ -55,6 +55,7 @@ module.exports = function (dbUrl, injection, appUtil) {
 
     service.findCount = function (table, filteringAndSorting) {
         return onlyFilteringEnsureIndexes(table, filteringAndSorting).then(function () {
+            // FIXME: .count deprecated
             return Q(modelFor(table).count(queryFor(table, filteringAndSorting)).exec());
         })
     };

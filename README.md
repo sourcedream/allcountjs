@@ -4,8 +4,6 @@
 
 <img src="https://allcountjs.com/assets/images/allcountjs-logo-card.png" width="381">
 
-# WARNING: This project is not maintained anymore
-
 # Current State
 
 AllcountJS isn't maintained anymore so we intend to keep this fork working and keep adding features. The current version is under development and isn't supposed to be used in production yet.  When a production ready version is reached we'll change the project name and keep this repo as compatibility for AllcountJS.
