@@ -13,7 +13,7 @@ module.exports = function (dbUrl, injection, appUtil) {
     var db;
     var models = {};
 
-    var connection = mongoose.createConnection(dbUrl);
+    var connection = mongoose.createConnection(dbUrl, { useNewUrlParser: true, useFindAndModify: false });
 
     var onConnectedDeferred = Q.defer();
     var onConnectedPromise = onConnectedDeferred.promise;
@@ -56,7 +56,7 @@ module.exports = function (dbUrl, injection, appUtil) {
     service.findCount = function (table, filteringAndSorting) {
         return onlyFilteringEnsureIndexes(table, filteringAndSorting).then(function () {
             // FIXME: .count deprecated
-            return Q(modelFor(table).count(queryFor(table, filteringAndSorting)).exec());
+            return Q(modelFor(table).countDocuments(queryFor(table, filteringAndSorting)).exec());
         })
     };
 

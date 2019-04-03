@@ -59,7 +59,7 @@ After that in order to install AllcountJS CLI you should run:
 > *NOTE:* Preferred way to install and run allcountjs on Windows is to use Git-Bash.
 
 ```
-npm install -g allcountjs-cli
+npm install -g @sourcedream/allcountjs-cli
 ```
 
 > *NOTE:* Users who prior installed allcountjs globally could continue use it but this way should be considered as deprecated.
