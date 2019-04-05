@@ -7,7 +7,7 @@ module.exports = function (test, fixtureName, testFn) {
 
     var cleanUp = function () {
         var deferred = Q.defer();
-        var connection = mongoose.createConnection(dbUrl);
+        var connection = mongoose.createConnection(dbUrl, { useNewUrlParser: true});
 
         connection.on('connected', function () {
             deferred.resolve(connection.db);
