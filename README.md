@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/sourcedream/allcountjs.svg?branch=master)](https://travis-ci.org/sourcedream/allcountjs)
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/allcount/allcountjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/allcount/allcountjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) [![dependencies Status](https://david-dm.org/sourcedream/allcountjs/status.svg)](https://david-dm.org/sourcedream/allcountjs)
 
 <img src="https://allcountjs.com/assets/images/allcountjs-logo-card.png" width="381">
 
