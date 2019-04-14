@@ -47,6 +47,7 @@ exports.crudFieldTest = function (test) {
                 link: 'http://www.example.com',
                 email: 'example@example.com',
                 radio: "Option 1",
+                select: "Option 1",
             };
             return crud.createEntity(_.clone(entityToCreate)).then(function (id) {
                 return crud.readEntity(id).then(function (entity) {

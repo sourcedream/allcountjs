@@ -15,7 +15,8 @@ A.app({
                     password: Fields.password("Password"),
                     link: Fields.link("Link"),
                     email: Fields.email("Email"),
-                    radio: Fields.radio("Radio", ["Option 1", "Option 2", "Option 3"])
+                    radio: Fields.radio("Radio", ["Option 1", "Option 2", "Option 3"]),
+                    select: Fields.select("Select", ["Option 1", "Option 2"])
                 }
             },
             Bar: {

@@ -340,6 +340,24 @@ allcountModule.config(["fieldRenderingServiceProvider", function (fieldRendering
                     controller.$setViewValue(emailValue ? emailValue : undefined);
                 });
                 return $compile('<input type="email" ng-model="emailValue" class="form-control">')(scope);
+            }],
+            select: [function (value, fieldDescription) {
+                var link = $('<div></div>');
+                link.text(value);
+                return link;
+            }, function (fieldDescription, controller, updateValue, clone, scope) {
+                var opts = (fieldDescription.fieldType.options);
+
+                var options = [];
+                opts.map(op =>options.push({name: op}));
+
+                scope.selectValue = controller.$viewValue;
+                scope.optionsValues = options;
+                scope.$watch('selectValue', function (selectValue) {
+                    console.log(selectValue);
+                    controller.$setViewValue(selectValue ? selectValue : undefined);
+                });
+                return $compile('<select ng-model="selectValue"  ng-options="r.name as r.name for r in optionsValues" class="form-control"></select>')(scope);
             }]
         }
     }]);

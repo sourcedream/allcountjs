@@ -178,6 +178,16 @@ exports.email = function (name) {
     })
 };
 
+exports.select = function (name, options) {
+    return new Field({
+        name: name,
+        fieldType: {
+            id: 'select',
+            options: options
+        }
+    })
+};
+
 function Field(config) {
     _.extend(this, config);
 }
